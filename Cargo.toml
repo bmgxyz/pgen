@@ -1,8 +1,9 @@
 [package]
-name = "pwgen"
-version = "0.1.0"
+name = "pgen"
+version = "0.2.0"
 authors = ["Bradley Gannon <bradley@bradleygannon.com>"]
 edition = "2018"
 
 [dependencies]
 rand = "0.7.3"
+clap = "2.33.0"
