@@ -1,13 +1,6 @@
-use rand::{thread_rng, Rng};
-use clap::{App};
+mod utils;
 
-fn get_random_character() -> char {
-    // choose a random character between `a` and `z`
-    // TODO make character set configurable (both w/ preset and regex)
-    let mut rng = thread_rng();
-    let random_char : u8 = rng.gen_range(97, 122+1);
-    random_char as char
-}
+use clap::{App};
 
 fn main() {
     // set up command line arguments
@@ -54,7 +47,7 @@ fn main() {
         // keep printing characters until we have enough
         // TODO give the user the option to have the output hidden on screen
         // (but still copyable)
-        print!("{}", get_random_character());
+        print!("{}", utils::get_random_character());
         num_chars += 1;
     }
     println!(); // new line
